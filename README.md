@@ -10,7 +10,7 @@ This android app solves the missing 'one man operation' feature of the webapp Mi
 In the current version the app starts a 10 second timer. During this 10 seconds you need to place the camera over the reflectance panel. After the 10 seconds are over
 3 captures are taken from the revlectance panel.
 
-![Screenshot]()
+![Screenshot](app-rededge-autocapture.jpg)
 
 # Roadmap
 

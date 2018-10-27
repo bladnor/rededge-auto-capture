@@ -12,7 +12,7 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
-import java.time.LocalDateTime
+import java.time.LocalTime
 
 
 class Requests(private val activity: MainActivity) {
@@ -35,7 +35,9 @@ class Requests(private val activity: MainActivity) {
     @SuppressLint("SetTextI18n")
     fun rededgeFirmwareVersionRequest() = StringRequest(Request.Method.GET, versionUrl, Response.Listener<String> { response ->
         LogWriter.writeData("response from $versionUrl request: $response")
-        activity.text_rededgeVersionInfo.text = response + LocalDateTime.now()
+        val jsonObject = JSONObject(response)
+        val swVersion = jsonObject.getString("sw_version")
+        activity.text_rededgeVersionInfo.text = swVersion + "\n"  + LocalTime.now()
     }, errorListener)
 
 

@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
         imageUpdater = Runnable {
             writeData("update image preview")
             requestQueue?.add(requests.updateImageWithLatestPreviewRequest())
-            handler.postDelayed(imageUpdater, 1000)
+            handler.postDelayed(imageUpdater, 500)
         }
-        handler.postDelayed(imageUpdater, 1000)
+        handler.postDelayed(imageUpdater, 500)
 
     }
 
@@ -115,6 +115,8 @@ class MainActivity : AppCompatActivity() {
      */
     private fun startCapture() {
         writeData("start capture")
+        text_countdown.text = "0"
+        text_numberOfCaptures.text = "0"
         requestQueue?.add(requests.streamingRequest(true))
         waitTimer.start()
     }

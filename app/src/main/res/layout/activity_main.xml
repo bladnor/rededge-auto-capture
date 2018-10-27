@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_rededgePreview"
+        android:layout_width="370dp"
+        android:layout_height="312dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_startCapture"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:contentDescription="Latest availabel preview image from the rededge camera" />
+
+    <TextView
+        android:id="@+id/text_rededgeVersionInfo"
+        android:layout_width="151dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="RedEdge Version"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_checkConnection"
+        app:layout_constraintTop_toTopOf="@+id/button_checkConnection"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/button_startCapture"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:text="Start capture"
+        app:layout_constraintStart_toStartOf="@+id/button_checkConnection"
+        app:layout_constraintTop_toBottomOf="@+id/button_checkConnection"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_checkConnection"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Check Connection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_countdown"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:text="Countdown"
+        app:layout_constraintStart_toStartOf="@+id/text_rededgeVersionInfo"
+        app:layout_constraintTop_toTopOf="@+id/button_startCapture" />
+
+    <TextView
+        android:id="@+id/text_numberOfCaptures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Image Captures"
+        app:layout_constraintStart_toStartOf="@+id/text_countdown"
+        app:layout_constraintTop_toBottomOf="@+id/text_countdown" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+</android.support.constraint.ConstraintLayout>

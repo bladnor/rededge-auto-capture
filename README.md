@@ -11,7 +11,7 @@ In the current version the app starts a 10 second timer. During this 10 seconds 
 # Roadmap
 
 - Move the hardcode values into app settings
-- Add QR Code detection based auto capture. This will allow to hold the camera over the revlectance panel. Once the QR Code is detected captures are taken.
+- Add QR Code detection based auto capture. This will allow to hold the camera over the reflectance panel. Once the QR Code is detected captures are taken.
 
 # Supported Android Version
 Version 8 is required but only because I wanted to us java.time classes. If you replace this with a jodatime implementation or simply use java Date it will work on lower versions.
